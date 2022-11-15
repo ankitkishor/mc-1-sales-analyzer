@@ -3,8 +3,6 @@ package com.jap.sales;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 public class SalesDataAnalyzer {
     SalesRecord sales=null;
@@ -59,6 +57,14 @@ public class SalesDataAnalyzer {
         return salesRecords;
     }
 
+    public static void main(String[] args) {
+        SalesDataAnalyzer salesDataAnalyzer=new SalesDataAnalyzer();
+        SalesRecord[] arr= salesDataAnalyzer.readFile("src/main/resources/purchase_details.csv");
+        for (SalesRecord num:arr
+             ) {
+            System.out.println(num);
+        }
+    }
 
 
 }
