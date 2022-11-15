@@ -13,7 +13,9 @@ public class SalesRecord {
 
 
     // Generate Constructors
+    public SalesRecord(){
 
+    }
     public SalesRecord(String date, int customer_id, int product_category, String payment_method, double amount, double time_on_site, int clicks_in_site) {
         this.date = date;
         this.customer_id = customer_id;
@@ -84,4 +86,16 @@ public class SalesRecord {
 
     // Generate the toString method
 
+    @Override
+    public String toString() {
+        return "SalesRecord{" +
+                "date='" + date + '\'' +
+                ", customer_id=" + customer_id +
+                ", product_category=" + product_category +
+                ", payment_method='" + payment_method + '\'' +
+                ", amount=" + amount +
+                ", time_on_site=" + time_on_site +
+                ", clicks_in_site=" + clicks_in_site +
+                '}';
+    }
 }
